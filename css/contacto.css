@@ -1,0 +1,147 @@
+.encabezadoContacto {
+    background-color: #5b1f8c;
+    color: #ffffff;
+    text-align: center;
+    padding: 70px 0;
+}
+
+.encabezadoContacto h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.encabezadoContacto p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.seccionContacto {
+    padding: 50px 0;
+}
+
+.filaContacto {
+    display: flex;
+    gap: 30px;
+}
+
+.columnaFormulario {
+    width: 60%;
+}
+
+.columnaInfo {
+    width: 40%;
+}
+
+.tarjetaContacto,
+.tarjetaInfo {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 2px solid #c8b6dc;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.tarjetaContacto h2,
+.tarjetaInfo h2,
+.seccionMapa h2 {
+    color: #5b1f8c;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.grupoFormulario {
+    margin-bottom: 18px;
+}
+
+.grupoFormulario label {
+    display: block;
+    color: #5b1f8c;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.grupoFormulario input,
+.grupoFormulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c8b6dc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.grupoFormulario input:focus,
+.grupoFormulario textarea:focus {
+    outline: none;
+    border-color: #8f2fb2;
+}
+
+.botonEnviar {
+    background-color: #00a859;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.botonEnviar:hover {
+    background-color: #008f4c;
+}
+
+.tarjetaInfo p {
+    font-size: 16px;
+    margin-bottom: 22px;
+}
+
+.tarjetaInfo strong {
+    color: #5b1f8c;
+}
+
+.seccionMapa {
+    padding: 20px 0 50px 0;
+}
+
+.mapa {
+    border: 5px solid #5b1f8c;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.mapa iframe {
+    display: block;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .encabezadoContacto {
+        padding: 45px 20px;
+    }
+
+    .encabezadoContacto h1 {
+        font-size: 32px;
+    }
+
+    .encabezadoContacto p {
+        font-size: 16px;
+    }
+
+    .filaContacto {
+        flex-direction: column;
+    }
+
+    .columnaFormulario,
+    .columnaInfo {
+        width: 100%;
+    }
+
+    .tarjetaContacto,
+    .tarjetaInfo {
+        padding: 22px;
+    }
+
+    .botonEnviar {
+        width: 100%;
+    }
+}

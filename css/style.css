@@ -1,0 +1,109 @@
+/*
+    Paleta de colores usada en todo el sitio:
+    Morado principal: #5b1f8c
+    Morado secundario: #8f2fb2
+    Verde acento: #00a859
+    Amarillo acento: #f5c400
+    Fondo claro: #f6f4fa
+    Texto oscuro: #222222
+*/
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f4fa;
+    color: #222222;
+}
+
+.menuPrincipal {
+    background-color: #5b1f8c;
+    padding: 18px 30px;
+}
+
+.contenedorMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoAcademia {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.listaMenu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.listaMenu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.listaMenu a:hover {
+    color: #f5c400;
+}
+
+.listaMenu .activo {
+    color: #f5c400;
+    border-bottom: 3px solid #f5c400;
+    padding-bottom: 5px;
+}
+
+.footerAcademia {
+    background-color: #5b1f8c;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.footerAcademia p {
+    margin: 8px 0;
+}
+
+.nombreFooter {
+    color: #f5c400;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footerAcademia a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footerAcademia a:hover {
+    color: #f5c400;
+}
+
+@media (max-width: 768px) {
+    .contenedorMenu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .listaMenu {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 15px;
+    }
+
+    .logoAcademia {
+        font-size: 22px;
+    }
+}
