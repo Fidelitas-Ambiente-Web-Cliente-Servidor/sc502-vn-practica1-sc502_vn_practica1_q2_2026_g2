@@ -22,3 +22,90 @@
 .busquedaCursos {
     padding: 40px 0;
 }
+
+.busquedaCursos input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c8b6dc;
+    border-radius: 5px;
+}
+
+/* Sección de categorías de cursos */
+.categoriaCursos {
+    padding-bottom: 50px;
+}
+
+.categoriaCursos h2 {
+    color: #5b1f8c;
+    margin-bottom: 25px;
+}
+
+/* Contenedor de las tarjetas */
+.filaCursos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tarjeta individual de cada curso */
+.tarjetaCurso {
+    background-color: #ffffff;
+    border: 2px solid #c8b6dc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+}
+
+/* Imagen del curso */
+.tarjetaCurso img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Nombre del curso */
+.tarjetaCurso h3 {
+    color: #5b1f8c;
+}
+
+/* Texto destacado dentro de la tarjeta */
+.tarjetaCurso strong {
+    color: #5b1f8c;
+}
+
+
+@media (max-width: 768px) {
+
+    .encabezadoCursos {
+        padding: 45px 20px;
+    }
+
+    .encabezadoCursos h1 {
+        font-size: 32px;
+    }
+
+    .filaCursos {
+        flex-direction: column;
+    }
+
+    .tarjetaCurso {
+        width: 100%;
+    }
+}
