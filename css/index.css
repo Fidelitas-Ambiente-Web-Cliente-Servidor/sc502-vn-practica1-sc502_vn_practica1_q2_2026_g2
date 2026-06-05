@@ -1,4 +1,4 @@
-/* BLOQUE MORADO IGUAL AL DE CURSOS */
+
 .encabezadoIndex {
     background-color: #5b1f8c;
     color: #ffffff;
@@ -18,7 +18,7 @@
     margin: auto;
 }
 
-/* SECCIÓN DEL BOTÓN Y FRASE (FUERA DEL MORADO) */
+
 .bienvenidaAccion {
     text-align: center;
     padding: 30px 0;
@@ -42,7 +42,7 @@
     font-size: 16px;
 }
 
-/* CURSOS DESTACADOS */
+
 .cursos {
     text-align: center;
     padding: 30px 20px;
@@ -82,7 +82,29 @@
     margin-top: 10px;
 }
 
-/* TESTIMONIOS */
+
+.estadisticas {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.estadistica h3 {
+    font-size: 40px;
+    color: #5b1f8c;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.estadistica p {
+    font-size: 16px;
+    color: #333;
+}
+
+
+
 .testimonios {
     text-align: center;
     padding: 30px 20px;
