@@ -126,3 +126,10 @@
     border-radius: 5px;
     font-style: italic;
 }
+
+.logoHero {
+    width: 680px;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px auto;
+} 
