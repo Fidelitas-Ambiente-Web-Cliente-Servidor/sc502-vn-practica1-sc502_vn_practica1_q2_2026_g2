@@ -17,7 +17,7 @@ body {
 
 .menuPrincipal {
     background-color: #5b1f8c;
-    padding: 18px 30px;
+    padding: 28px 40px;
 }
 
 .contenedorMenu {
@@ -28,7 +28,7 @@ body {
 
 .logoAcademia {
     color: #ffffff;
-    font-size: 24px;
+    font-size: 34px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -36,7 +36,7 @@ body {
 .listaMenu {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 45px;
     margin: 0;
     padding: 0;
 }
@@ -45,6 +45,7 @@ body {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 28px;
 }
 
 .listaMenu a:hover {
