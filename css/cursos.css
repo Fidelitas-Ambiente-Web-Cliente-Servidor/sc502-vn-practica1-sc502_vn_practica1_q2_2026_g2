@@ -56,15 +56,16 @@
     border-radius: 5px;
     padding: 20px;
     width: 300px;
+    overflow: hidden;
 
 }
 
 /* Imagen del curso */
 .tarjetaCurso img {
     width: 100%;
-    height: 180px;
+    height: 290px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 /* Nombre del curso */
@@ -85,22 +86,3 @@
 
 }
 
-
-@media (max-width: 768px) {
-
-    .encabezadoCursos {
-        padding: 45px 20px;
-    }
-
-    .encabezadoCursos h1 {
-        font-size: 32px;
-    }
-
-    .filaCursos {
-        flex-direction: column;
-    }
-
-    .tarjetaCurso {
-        width: 100%;
-    }
-}
