@@ -4,10 +4,14 @@
 
 
 <head>
+
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cursos - Academia Ficticia</title>
 
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cursos.css">
 
 
 </head>
@@ -15,29 +19,46 @@
 
 
 <body>
-    <!-- Encabezado principal -->
+
+        <!-- Menú principal -->
     <header>
-        <h1>Catálogo de Cursos</h1>
-        <p>Aprende con nuestro cursos especializados</p>
+        <nav class="menuPrincipal">
+            <div class="contenedorMenu">
+                <a href="index.html" class="logoAcademia">Academia Ficticia</a>
+
+                <ul class="listaMenu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cursos.html" class="activo">Cursos</a></li>
+                    <li><a href="profesores.html">Profesores</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <main> 
-        <!-- Barra de busqueda -->
-        <section>
-
-            <input type = "text" class="form-control" placeholder="Buscar Cursos"  > 
-
-
-
-
-        </section>
         
-         
+        <!-- Encabezado -->
+        <section class="encabezadoCursos">
+            <div class="contenedor">
+                <h1>Catálogo de Cursos</h1>
+                <p>
+                    Explore nuestra oferta académica y descubra cursos
+                    diseñados para fortalecer sus conocimientos tecnológicos.
+                </p>
+            </div>
+        </section>
 
-
-
+        <!-- Barra de búsqueda -->
+        <section class="busquedaCursos">
+            <div class="contenedor">
+                <input type="text" placeholder="Buscar curso">
+            </div>
+        </section>
 
     </main>
+
+    
 
 
 
