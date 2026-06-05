@@ -1,0 +1,127 @@
+.encabezadoProfesores {
+background-color: #5b1f8c;
+color: #ffffff;
+text-align: center;
+padding: 70px 0;
+}
+
+.encabezadoProfesores h1 {
+font-size: 42px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+.encabezadoProfesores p {
+font-size: 18px;
+max-width: 700px;
+margin: auto;
+}
+
+.seccionProfesores {
+padding: 50px 0;
+}
+
+.gridProfesores {
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+}
+
+.tarjetaProfesor {
+flex: 1 1 calc(50% - 15px);
+background-color: #ffffff;
+padding: 30px;
+border: 2px solid #c8b6dc;
+border-radius: 5px;
+text-align: center;
+box-sizing: border-box;
+}
+
+.tarjetaProfesor img {
+width: 140px;
+height: 140px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 15px;
+}
+
+.tarjetaProfesor h3 {
+color: #5b1f8c;
+margin-bottom: 8px;
+}
+
+.tarjetaProfesor h4 {
+color: #00a859;
+margin-bottom: 12px;
+}
+
+.tarjetaProfesor p {
+font-size: 16px;
+line-height: 1.6;
+}
+
+.seccionMisionVision {
+padding: 20px 0 50px 0;
+}
+
+.contenedorMisionVision {
+display: flex;
+gap: 30px;
+}
+
+.tarjetaMision,
+.tarjetaVision {
+width: 50%;
+background-color: #ffffff;
+padding: 30px;
+border: 2px solid #c8b6dc;
+border-radius: 5px;
+box-sizing: border-box;
+}
+
+.tarjetaMision h2,
+.tarjetaVision h2 {
+color: #5b1f8c;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.tarjetaMision p,
+.tarjetaVision p {
+line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+
+```
+.encabezadoProfesores {
+    padding: 45px 20px;
+}
+
+.encabezadoProfesores h1 {
+    font-size: 32px;
+}
+
+.encabezadoProfesores p {
+    font-size: 16px;
+}
+
+.gridProfesores {
+    flex-direction: column;
+}
+
+.tarjetaProfesor {
+    flex: 1 1 100%;
+}
+
+.contenedorMisionVision {
+    flex-direction: column;
+}
+
+.tarjetaMision,
+.tarjetaVision {
+    width: 100%;
+}
+```
+
+}
