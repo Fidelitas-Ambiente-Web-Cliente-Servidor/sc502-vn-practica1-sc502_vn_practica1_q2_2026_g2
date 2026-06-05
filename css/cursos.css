@@ -1,0 +1,24 @@
+/* Encabezado principal del catálogo de cursos */
+.encabezadoCursos {
+    background-color: #5b1f8c;
+    color: #ffffff;
+    text-align: center;
+    padding: 70px 0;
+}
+
+.encabezadoCursos h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.encabezadoCursos p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Sección de búsqueda de cursos */
+.busquedaCursos {
+    padding: 40px 0;
+}
