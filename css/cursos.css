@@ -43,26 +43,12 @@
 /* Contenedor de las tarjetas */
 .filaCursos {
     display: flex;
+    
     gap: 20px;
     flex-wrap: wrap;
+
+    border: 2px solid red;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Tarjeta individual de cada curso */
@@ -72,11 +58,15 @@
     border-radius: 5px;
     padding: 20px;
     width: 300px;
+
+    border: 2px solid blue;
 }
 
 /* Imagen del curso */
 .tarjetaCurso img {
     width: 100%;
+    height: 180px;
+    object-fit: cover;
     border-radius: 5px;
 }
 
@@ -88,6 +78,14 @@
 /* Texto destacado dentro de la tarjeta */
 .tarjetaCurso strong {
     color: #5b1f8c;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+
 }
 
 
