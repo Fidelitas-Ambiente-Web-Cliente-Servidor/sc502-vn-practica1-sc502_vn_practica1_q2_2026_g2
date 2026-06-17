@@ -6,12 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Estilos generales -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Estilos de la página de profesores -->
     <link rel="stylesheet" href="./css/profesores.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- Menú principal -->
     <header>
         <nav class="menuPrincipal">
             <div class="contenedorMenu">
@@ -29,6 +36,7 @@
 
     <main>
 
+        <!-- Encabezado de la página -->
         <section class="encabezadoProfesores">
             <div class="contenedor">
                 <h1>Nuestro Equipo Docente</h1>
@@ -41,68 +49,18 @@
             </div>
         </section>
 
+        <!-- Aquí se cargan las tarjetas desde JavaScript -->
         <section class="seccionProfesores">
             <div class="contenedor">
 
-                <div class="gridProfesores">
-
-                    <div class="tarjetaProfesor">
-                        <img src="./Imagenes/profesor1.jpg" alt="Ana Rodríguez">
-
-                        <h3>Andres Rodríguez</h3>
-
-                        <h4>Desarrollo Web</h4>
-
-                        <p>
-                            Especialista en HTML, CSS y JavaScript con amplia
-                            experiencia en el desarrollo de aplicaciones web modernas.
-                        </p>
-                    </div>
-
-                    <div class="tarjetaProfesor">
-                        <img src="./Imagenes/profesor2.jpg" alt="Carlos Méndez">
-
-                        <h3>Carlos Méndez</h3>
-
-                        <h4>Bases de Datos</h4>
-
-                        <p>
-                            Consultor especializado en MySQL y SQL Server con experiencia
-                            en diseño y administración de bases de datos.
-                        </p>
-                    </div>
-
-                    <div class="tarjetaProfesor">
-                        <img src="./Imagenes/profesor3.jpg" alt="María Vargas">
-
-                        <h3>María Vargas</h3>
-
-                        <h4>Ciberseguridad</h4>
-
-                        <p>
-                            Especialista en seguridad informática y protección de redes
-                            empresariales.
-                        </p>
-                    </div>
-
-                    <div class="tarjetaProfesor">
-                        <img src="./Imagenes/profesor4.jpg" alt="Daniel Solano">
-
-                        <h3>Daniela Solano</h3>
-
-                        <h4>Programación</h4>
-
-                        <p>
-                            Ingeniera de software con experiencia en Java, Python y
-                            desarrollo de aplicaciones empresariales.
-                        </p>
-                    </div>
+                <div class="gridProfesores" id="contenedorProfesores">
 
                 </div>
 
             </div>
         </section>
 
+        <!-- Sección de misión y visión -->
         <section class="seccionMisionVision">
             <div class="contenedor">
 
@@ -136,6 +94,7 @@
 
     </main>
 
+    <!-- Pie de página -->
     <footer class="footerAcademia">
         <div class="contenedor">
 
@@ -153,6 +112,67 @@
 
         </div>
     </footer>
+
+    <!-- Modal para mostrar más información -->
+    <div class="modal fade" id="modalProfesor" tabindex="-1">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="tituloModal">
+                        Profesor
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- Foto del profesor -->
+                    <img
+                        id="fotoModal"
+                        class="img-fluid rounded mb-3"
+                        alt="Profesor"
+                        style="width: 250px; height: 250px; object-fit: cover;">
+
+                    <p>
+                        <strong>Especialidad:</strong>
+                        <span id="especialidadModal"></span>
+                    </p>
+
+                    <p>
+                        <strong>Correo:</strong>
+                        <span id="correoModal"></span>
+                    </p>
+
+                    <p>
+                        <strong>Cursos:</strong>
+                        <span id="cursosModal"></span>
+                    </p>
+
+                    <p id="descripcionModal"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript de la página -->
+    <script src="./js/profesores.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

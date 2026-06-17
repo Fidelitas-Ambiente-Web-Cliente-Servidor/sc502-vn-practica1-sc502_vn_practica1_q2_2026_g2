@@ -38,11 +38,11 @@ box-sizing: border-box;
 }
 
 .tarjetaProfesor img {
-width: 140px;
-height: 140px;
-border-radius: 50%;
-object-fit: cover;
-margin-bottom: 15px;
+    width: 180px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .tarjetaProfesor h3 {
