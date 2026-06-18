@@ -145,29 +145,30 @@
         width: 100%;
     }
 
-    .mensajeError {
+}
+
+.mensajeError {
     color: #b00020;
     font-size: 14px;
     margin-top: 5px;
     margin-bottom: 0;
-    }
+}
 
-    .mensajeExito {
+.mensajeExito {
     color: #00a859;
     font-weight: bold;
     margin-top: 18px;
-    }
+}
 
-    .campoCorrecto {
+.campoCorrecto {
     border-color: #00a859;
-    }
+}
 
-    .campoIncorrecto {
+.campoIncorrecto {
     border-color: #b00020;
-    }
+}
 
-    .botonEnviar:disabled {
+.botonEnviar:disabled {
     background-color: #999999;
     cursor: not-allowed;
-    }
 }
