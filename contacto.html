@@ -44,33 +44,44 @@
                             <div class="tarjetaContacto">
                                 <h2>Formulario de contacto</h2>
 
-                                <form action="#" method="get">
+                                <form id="formularioContacto" action="#" method="get">
                                     <div class="grupoFormulario">
                                         <label for="nombre">Nombre completo</label>
                                         <input type="text" id="nombre" name="nombre">
+                                        <p class="mensajeError" id="errorNombre"></p>
                                     </div>
 
                                     <div class="grupoFormulario">
                                         <label for="correo">Correo electrónico</label>
                                         <input type="email" id="correo" name="correo">
+                                        <p class="mensajeError" id="errorCorreo"></p>
+                                        <p class="mensajeError" id="errorNombre"></p>
                                     </div>
 
                                     <div class="grupoFormulario">
                                         <label for="telefono">Teléfono</label>
                                         <input type="tel" id="telefono" name="telefono">
+                                        <p class="mensajeError" id="errorTelefono"></p>
                                     </div>
 
                                     <div class="grupoFormulario">
                                         <label for="asunto">Asunto</label>
                                         <input type="text" id="asunto" name="asunto">
+                                        <p class="mensajeError" id="errorAsunto"></p>
                                     </div>
 
                                     <div class="grupoFormulario">
                                         <label for="mensaje">Mensaje</label>
                                         <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                                        <p class="mensajeError" id="errorMensaje"></p>                          
                                     </div>
 
-                                    <button type="submit" class="botonEnviar">Enviar</button>
+                                    <button type="submit" class="botonEnviar" id="botonEnviar" disabled>
+                                        Enviar
+                                    </button>
+
+
+                                    <p class="mensajeExito" id="mensajeExito"></p>
                                 </form>
                             </div>
                         </div>
@@ -134,5 +145,7 @@
                 </p>
             </div>
         </footer>
+
+        <script src="./js/contacto.js"></script>
     </body>
 </html>
