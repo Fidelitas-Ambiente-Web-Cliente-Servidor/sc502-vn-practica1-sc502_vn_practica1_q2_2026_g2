@@ -91,21 +91,3 @@ body {
 .footerAcademia a:hover {
     color: #f5c400;
 }
-
-@media (max-width: 768px) {
-    .contenedorMenu {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .listaMenu {
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 15px;
-    }
-
-    .logoAcademia {
-        font-size: 22px;
-    }
-
-}
