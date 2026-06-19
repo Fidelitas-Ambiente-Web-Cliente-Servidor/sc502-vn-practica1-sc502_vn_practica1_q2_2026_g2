@@ -1,30 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-
-
+<html lang="es">
 
 <head>
-
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos - TechCore Academy</title>
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/cursos.css">
-
-
 </head>
 
-
-
 <body>
-  
-        <!-- Menú principal -->
+
     <header>
         <nav class="menuPrincipal">
             <div class="contenedorMenu">
-                <a href="index.html" class="logoAcademia">TechCore Academy</a>
+                
+                <a href="index.html" class="logoAcademia">
+                    TechCore Academy
+                </a>
 
                 <ul class="listaMenu">
                     <li><a href="index.html">Inicio</a></li>
@@ -32,6 +26,7 @@
                     <li><a href="profesores.html">Profesores</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
+
             </div>
         </nav>
     </header>
@@ -40,126 +35,59 @@
 
         <section class="encabezadoCursos">
             <div class="contenedor">
-                
                 <h1>Catálogo de Cursos</h1>
                 <p>
-                   Explore nuestra oferta académica y descubra cursos
-                   diseñados para fortalecer sus conocimientos tecnológicos.
+                    Explore nuestra oferta académica y descubra cursos
+                    diseñados para fortalecer sus conocimientos tecnológicos.
                 </p>
             </div>
         </section>
 
-    <!-- Barra de búsqueda -->
         <section class="busquedaCursos">
             <div class="contenedor">
-                <input type="text" placeholder="Buscar curso">
+                <input type="text" id="buscarCurso" placeholder="Buscar curso por nombre o descripción">
+
+                <select id="filtroCategoria">
+                    <option value="Todos">Todas las categorías</option>
+                    <option value="Desarrollo Web">Desarrollo Web</option>
+                    <option value="Programación">Programación</option>
+                    <option value="Base de Datos">Base de Datos</option>
+                </select>
             </div>
         </section>
 
-    <!-- Categoría Desarrollo Web -->
-        <section class="categoriaCursos">
-            <div class="contenedor">
- 
-                <h2>Desarrollo Web</h2>
-
-                <div class="filaCursos">
-
-                    <div class="tarjetaCurso">
-                        <img src="./Imagenes/html.png" alt="HTML">
-                        <h3>HTML5</h3>
-                        <p><strong>Categoría:</strong> Desarrollo Web</p>
-                        <p>Creación de la estructura de sitios web modernos.</p>
-                        <p><strong>Duración:</strong> 20 horas</p>
-                        <p><strong>Precio:</strong> $50</p>
-                    </div>
-
-                    <div class="tarjetaCurso">
-                        <img src="./Imagenes/css.png" alt="CSS">
-                        <h3>CSS3</h3>
-                        <p><strong>Categoría:</strong> Desarrollo Web</p>
-                     
-                        <p>Diseño y personalización visual de páginas web.</p>
-                        <p><strong>Duración:</strong> 25 horas</p>
-                        <p><strong>Precio:</strong> $60</p>
-                    </div>
-
-                    <div class="tarjetaCurso">
-                        <img src="./Imagenes/javascript.png" alt="JavaScript">
-                        <h3>JavaScript</h3>
-                        <p><strong>Categoría:</strong> Desarrollo Web</p>
-                        <p>Programación interactiva para aplicaciones web.</p>
-                        <p><strong>Duración:</strong> 30 horas</p>
-                        <p><strong>Precio:</strong> $80</p>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-    <!-- Categoría Programación -->
         <section class="categoriaCursos">
             <div class="contenedor">
 
-                <h2>Programación</h2>
-                
+                <h2>Cursos Disponibles</h2>
 
-                <div class="filaCursos">
-
-                    <div class="tarjetaCurso">
-                        <img src="./Imagenes/java.png" alt="Java">
-                        <h3>Java</h3>
-                        <p><strong>Categoría:</strong> Programación</p>
-                        <p>Desarrollo de aplicaciones orientadas a objetos.</p>
-                        <p><strong>Duración:</strong> 40 horas</p>
-                        <p><strong>Precio:</strong> $120</p>
-                    </div>
-
-                    <div class="tarjetaCurso">
-                        <img src="./Imagenes/python.jpeg" alt="Python">
-                        <h3>Python</h3>
-                        <p><strong>Categoría:</strong> Programación</p>
-                        <p>Automatización y desarrollo de software moderno.</p>
-                        <p><strong>Duración:</strong> 35 horas</p>
-                        <p><strong>Precio:</strong> $100</p>
-                    </div>
-
-                    <div class="tarjetaCurso">
-                        <img src="./Imagenes/mysql.png" alt="MySQL">
-                        <h3>MySQL</h3>
-                        <p><strong>Categoría:</strong> Base de Datos</p>
-                        <p>Gestión y administración de bases de datos.</p>
-                        <p><strong>Duración:</strong> 20 horas</p>
-                        <p><strong>Precio:</strong> $70</p>
-                    </div>
-
+                <div id="contenedorCursos" class="filaCursos">
+                    <!-- JS -->
                 </div>
 
             </div>
         </section>
 
     </main>
-    
+
     <footer class="footerAcademia">
         <div class="contenedor">
             <p class="nombreFooter">TechCore Academy</p>
-             <p>
+
+            <p>
                 <a href="#">Facebook</a>
                 <a href="#">Instagram</a>
                 <a href="#">LinkedIn</a>
-             </p>
+            </p>
 
-             <p>
-                © 2026 TechCore Academy. Todos los derechos reservados.
-             </p>
-
-
+            <p>© 2026 TechCore Academy. Todos los derechos reservados.</p>
         </div>
-
     </footer>
 
+    <script src="./js/cursos.js"></script>
 
 </body>
+
 </html>
 
 
