@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Estilos generales -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
-    <!-- Estilos de la página de profesores -->
-    <link rel="stylesheet" href="./css/profesores.css">
+    <!-- Estilos de la página -->
+    <link rel="stylesheet" href="../css/profesores.css">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,51 +22,84 @@
     <header>
         <nav class="menuPrincipal">
             <div class="contenedorMenu">
-                <a href="index.html" class="logoAcademia">TechCore Academy</a>
+
+                <a href="../index.php" class="logoAcademia">
+                    TechCore Academy
+                </a>
 
                 <ul class="listaMenu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="cursos.html">Cursos</a></li>
-                    <li><a href="profesores.html" class="activo">Profesores</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="../index.php">Inicio</a></li>
+                    <li><a href="../cursos.html">Cursos</a></li>
+                    <li><a href="../index.php" class="activo">Profesores</a></li>
+                    <li><a href="../contacto.html">Contacto</a></li>
                 </ul>
+
             </div>
         </nav>
     </header>
 
     <main>
 
-        <!-- Encabezado de la página -->
+        <!-- Encabezado -->
         <section class="encabezadoProfesores">
             <div class="contenedor">
+
                 <h1>Nuestro Equipo Docente</h1>
 
                 <p>
-                    Conozca a los profesionales que forman parte de TechCore Academy 
-                    y acompañan el crecimiento académico de nuestros
-                    estudiantes.
+                    Conozca a los profesionales que forman parte de TechCore Academy
+                    y acompañan el crecimiento académico de nuestros estudiantes.
                 </p>
+
             </div>
         </section>
 
-        <!-- Aquí se cargan las tarjetas desde JavaScript -->
+        <!-- Profesores -->
         <section class="seccionProfesores">
+
             <div class="contenedor">
 
-                <div class="gridProfesores" id="contenedorProfesores">
+                <div class="gridProfesores">
+
+                    <?php foreach ($profesores as $profesor): ?>
+
+                        <div class="tarjetaProfesor">
+
+                            <img
+                                src="../Imagenes/<?php echo $profesor['foto']; ?>"
+                                alt="<?php echo $profesor['nombre']; ?>">
+
+                            <h2>
+                                <?php echo $profesor['nombre']; ?>
+                            </h2>
+
+                            <h3>
+                                <?php echo $profesor['especialidad']; ?>
+                            </h3>
+
+                            <p>
+                                <?php echo $profesor['descripcion']; ?>
+                            </p>
+
+                        </div>
+
+                    <?php endforeach; ?>
 
                 </div>
 
             </div>
+
         </section>
 
-        <!-- Sección de misión y visión -->
+        <!-- Misión y Visión -->
         <section class="seccionMisionVision">
+
             <div class="contenedor">
 
                 <div class="contenedorMisionVision">
 
                     <div class="tarjetaMision">
+
                         <h2>Misión</h2>
 
                         <p>
@@ -74,31 +107,37 @@
                             educación innovadora, práctica y orientada a las necesidades
                             actuales del mercado laboral.
                         </p>
+
                     </div>
 
                     <div class="tarjetaVision">
+
                         <h2>Visión</h2>
 
                         <p>
                             Ser una academia líder en educación tecnológica,
                             reconocida por la excelencia académica, la innovación
-                            y el compromiso con el desarrollo integral de sus
-                            estudiantes.
+                            y el compromiso con el desarrollo integral de sus estudiantes.
                         </p>
+
                     </div>
 
                 </div>
 
             </div>
+
         </section>
 
     </main>
 
-    <!-- Pie de página -->
+    <!-- Footer -->
     <footer class="footerAcademia">
+
         <div class="contenedor">
 
-            <p class="nombreFooter">TechCore Academy</p>
+            <p class="nombreFooter">
+                TechCore Academy
+            </p>
 
             <p>
                 <a href="#">Facebook</a>
@@ -111,67 +150,10 @@
             </p>
 
         </div>
+
     </footer>
 
-    <!-- Modal para mostrar más información -->
-    <div class="modal fade" id="modalProfesor" tabindex="-1">
-
-        <div class="modal-dialog">
-
-            <div class="modal-content">
-
-                <div class="modal-header">
-
-                    <h5 class="modal-title" id="tituloModal">
-                        Profesor
-                    </h5>
-
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal">
-                    </button>
-
-                </div>
-
-                <div class="modal-body">
-
-                    <!-- Foto del profesor -->
-                    <img
-                        id="fotoModal"
-                        class="img-fluid rounded mb-3"
-                        alt="Profesor"
-                        style="width: 250px; height: 250px; object-fit: cover;">
-
-                    <p>
-                        <strong>Especialidad:</strong>
-                        <span id="especialidadModal"></span>
-                    </p>
-
-                    <p>
-                        <strong>Correo:</strong>
-                        <span id="correoModal"></span>
-                    </p>
-
-                    <p>
-                        <strong>Cursos:</strong>
-                        <span id="cursosModal"></span>
-                    </p>
-
-                    <p id="descripcionModal"></p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- JavaScript de la página -->
-    <script src="./js/profesores.js"></script>
-
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
