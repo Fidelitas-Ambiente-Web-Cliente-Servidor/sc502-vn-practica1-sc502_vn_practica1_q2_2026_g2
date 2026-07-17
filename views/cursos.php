@@ -1,4 +1,4 @@
-<?php require_once "layout/header.php"; ?>
+<?php require_once __DIR__ . "/layout/header.php"; ?>
 
 <main>
 
@@ -21,7 +21,7 @@
 
     <div class="contenedor">
 
-        <form method="GET" action="index.php">
+        <form method="GET" action="/index.php">
 
             <input type="hidden" name="controller" value="Cursos">
             <input type="hidden" name="action" value="index">
@@ -30,17 +30,9 @@
 
                 <option value="Todos">Todas las categorías</option>
 
-                <option value="Desarrollo Web">
-                    Desarrollo Web
-                </option>
-
-                <option value="Programación">
-                    Programación
-                </option>
-
-                <option value="Base de Datos">
-                    Base de Datos
-                </option>
+                <option value="Desarrollo Web">Desarrollo Web</option>
+                <option value="Programación">Programación</option>
+                <option value="Base de Datos">Base de Datos</option>
 
             </select>
 
@@ -58,36 +50,8 @@
 
         <div class="filaCursos">
 
-            <?php foreach($cursos as $curso): ?>
+            <?php foreach ($cursos as $curso): ?>
 
                 <div class="cardCurso">
 
-                    <img src="img/<?php echo $curso["imagen"]; ?>" alt="<?php echo $curso["nombre"]; ?>">
-
-                    <h3><?php echo $curso["nombre"]; ?></h3>
-
-                    <p><?php echo $curso["descripcion"]; ?></p>
-
-                    <p>
-                        <strong>Categoría:</strong>
-                        <?php echo $curso["categoria"]; ?>
-                    </p>
-
-                    <p>
-                        <strong>Duración:</strong>
-                        <?php echo $curso["duracion"]; ?>
-                    </p>
-
-                </div>
-
-            <?php endforeach; ?>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-<?php require_once "layout/footer.php"; ?>
+                    <img src="/Imagenes/<?php echo
