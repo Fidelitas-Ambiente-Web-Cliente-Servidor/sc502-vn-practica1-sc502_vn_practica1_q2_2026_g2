@@ -69,3 +69,33 @@ INSERT INTO contacto (nombre_completo, correo, telefono, asunto, mensaje) VALUES
 ('María López', 'maria.lopez@correo.com', '89998877', 'Matrícula', 'Estoy interesada en matricular un curso y deseo conocer los requisitos.'),
 ('José Ramírez', 'jose.ramirez@correo.com', '86665544', 'Profesores', 'Me gustaría obtener información sobre los profesores y sus especialidades.'),
 ('Laura Sánchez', 'laura.sanchez@correo.com', '85554433', 'Consulta general', 'Tengo una consulta general sobre los servicios académicos ofrecidos por la institución.');
+
+CREATE TABLE IF NOT EXISTS  cursos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT NOT NULL,
+    categoria VARCHAR(100) NOT NULL,
+    duracion VARCHAR(50) NOT NULL,
+    imagen VARCHAR(100) NOT NULL
+);
+
+INSERT INTO cursos 
+(nombre, descripcion, categoria, duracion, imagen)
+VALUES
+('Desarrollo Web',
+'Aprenda HTML, CSS y JavaScript.',
+'Desarrollo Web',
+'3 meses',
+'web.jpg'),
+
+('Programación Java',
+'Aprenda programación orientada a objetos.',
+'Programación',
+'4 meses',
+'java.jpg'),
+
+('Bases de Datos MySQL',
+'Gestión y consultas SQL.',
+'Base de Datos',
+'2 meses',
+'mysql.jpg');
