@@ -99,3 +99,4 @@ VALUES
 'Base de Datos',
 '2 meses',
 'mysql.jpg');
+
