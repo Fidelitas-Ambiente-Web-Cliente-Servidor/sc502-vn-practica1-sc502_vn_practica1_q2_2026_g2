@@ -4,31 +4,32 @@ require_once __DIR__ . "/../config/database.php";
 
 class ProfesorModel
 {
-    private $conexion;
+    private $db;
 
     public function __construct()
     {
-        $database = new Database();
-        $this->conexion = $database->connect();
+        $this->db = Database::getInstance()->getConnection();
     }
 
     public function getAll()
     {
         $sql = "SELECT * FROM profesores";
 
-        $consulta = $this->conexion->prepare($sql);
-        $consulta->execute();
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
 
-        return $consulta->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getById($id)
     {
-        $sql = "SELECT * FROM profesores WHERE id = ?";
+        $sql = "SELECT * FROM profesores WHERE id = :id";
 
-        $consulta = $this->conexion->prepare($sql);
-        $consulta->execute([$id]);
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute([
+            ":id" => $id
+        ]);
 
-        return $consulta->fetch(PDO::FETCH_ASSOC);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }

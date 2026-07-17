@@ -1,65 +1,78 @@
-<!DOCTYPE html>
-<html lang="es">
+<?php
+$paginaActiva = "profesores";
+require_once __DIR__ . "/layout/header.php";
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profesor - TechCore Academy</title>
-
-    <!-- Estilos -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/profesores.css">
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-
-<body>
-
-<div class="container mt-5">
-
-    <a href="index.php?controller=Profesores&action=index"
-       class="btn btn-secondary mb-4">
-        ← Volver
-    </a>
-
-    <div class="card shadow">
-
-        <div class="card-body">
-
-            <img
-                src="Imagenes/<?php echo htmlspecialchars($profesor['foto']); ?>"
-                alt="<?php echo htmlspecialchars($profesor['nombre']); ?>"
-                class="img-fluid mb-4"
-                style="max-width:250px;">
-
-            <h1>
-                <?php echo htmlspecialchars($profesor['nombre']); ?>
-            </h1>
-
-            <h4 class="text-primary">
-                <?php echo htmlspecialchars($profesor['especialidad']); ?>
-            </h4>
-
-            <hr>
+<main>
+    <section class="encabezadoProfesores">
+        <div class="contenedor">
+            <h1>Nuestro Equipo Docente</h1>
 
             <p>
-                <strong>Correo:</strong>
-                <?php echo htmlspecialchars($profesor['correo']); ?>
+                Conozca a los profesionales que forman parte de TechCore Academy
+                y acompañan el crecimiento académico de nuestros estudiantes.
             </p>
-
-            <p>
-                <?php echo htmlspecialchars($profesor['descripcion']); ?>
-            </p>
-
         </div>
+    </section>
 
-    </div>
+    <section class="seccionProfesores">
+        <div class="contenedor">
+            <div class="gridProfesores">
+                <?php foreach ($profesores as $profesor): ?>
 
-</div>
+                    <div class="tarjetaProfesor">
+                        <img
+                            src="Imagenes/<?php echo htmlspecialchars($profesor['foto']); ?>"
+                            alt="<?php echo htmlspecialchars($profesor['nombre']); ?>">
 
-<!-- Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+                        <h2>
+                            <?php echo htmlspecialchars($profesor['nombre']); ?>
+                        </h2>
 
-</body>
-</html>
+                        <h3>
+                            <?php echo htmlspecialchars($profesor['especialidad']); ?>
+                        </h3>
+
+                        <p>
+                            <?php echo htmlspecialchars($profesor['descripcion']); ?>
+                        </p>
+
+                        <a class="btn btn-primary"
+                           href="index.php?controller=profesores&action=show&id=<?php echo $profesor['id']; ?>">
+                            Ver perfil
+                        </a>
+                    </div>
+
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccionMisionVision">
+        <div class="contenedor">
+            <div class="contenedorMisionVision">
+                <div class="tarjetaMision">
+                    <h2>Misión</h2>
+
+                    <p>
+                        Formar profesionales altamente capacitados mediante una
+                        educación innovadora, práctica y orientada a las necesidades
+                        actuales del mercado laboral.
+                    </p>
+                </div>
+
+                <div class="tarjetaVision">
+                    <h2>Visión</h2>
+
+                    <p>
+                        Ser una academia líder en educación tecnológica,
+                        reconocida por la excelencia académica, la innovación
+                        y el compromiso con el desarrollo integral de sus estudiantes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<?php require_once __DIR__ . "/layout/footer.php"; ?>

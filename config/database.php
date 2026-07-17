@@ -1,27 +1,36 @@
 <?php
 
-class Database
-{
-    private $host = "db";
-    private $dbname = "appdb";
-    private $username = "root";
-    private $password = "root";
+class Database {
+    private static $instance = null;
+    private $connection;
 
-    public function connect()
-    {
+    private function __construct() {
+        $host = "db";
+        $dbname = "appdb";
+        $user = "root";
+        $password = "root";
+        $charset = "utf8mb4";
+
+        $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
+
         try {
-            $conexion = new PDO(
-                "mysql:host={$this->host};dbname={$this->dbname};charset=utf8",
-                $this->username,
-                $this->password
-            );
-
-            $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            return $conexion;
-
+            $this->connection = new PDO($dsn, $user, $password);
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             die("Error de conexión: " . $e->getMessage());
         }
+    }
+
+    public static function getInstance() {
+        if (self::$instance === null) {
+            self::$instance = new Database();
+        }
+
+        return self::$instance;
+    }
+
+    public function getConnection() {
+        return $this->connection;
     }
 }

@@ -86,17 +86,17 @@ VALUES
 'Aprenda HTML, CSS y JavaScript.',
 'Desarrollo Web',
 '3 meses',
-'web.jpg'),
+'web.png'),
 
 ('Programación Java',
 'Aprenda programación orientada a objetos.',
 'Programación',
 '4 meses',
-'java.jpg'),
+'java.png'),
 
 ('Bases de Datos MySQL',
 'Gestión y consultas SQL.',
 'Base de Datos',
 '2 meses',
-'mysql.jpg');
+'mysql.png');
 

@@ -1,33 +1,9 @@
 <?php
+$paginaActiva = "index";
 require_once __DIR__ . "/layout/header.php";
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - TechCore Academy</title>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/index.css">
-</head>
-
-<body>
-    <nav class="menuPrincipal">
-        <div class="contenedorMenu">
-            <a href="index.php" class="logoAcademia">
-                TechCore Academy
-            </a>
-
-            <ul class="listaMenu">
-                <li><a href="index.php" class="activo">Inicio</a></li>
-                <li><a href="cursos.html">Cursos</a></li>
-                <li><a href="profesores.html">Profesores</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
-
+<main>
     <section class="encabezadoIndex">
         <div class="contenedor">
             <img src="./Imagenes/logo-techcore.png"
@@ -35,7 +11,9 @@ require_once __DIR__ . "/layout/header.php";
                  class="logoHero">
 
             <h1>Bienvenido a TechCore Academy</h1>
-            <p class="slogan">“Impulsando tu futuro desde el núcleo de la tecnología.”</p>
+            <p class="slogan">
+                “Impulsando tu futuro desde el núcleo de la tecnología.”
+            </p>
         </div>
     </section>
 
@@ -45,7 +23,7 @@ require_once __DIR__ . "/layout/header.php";
                 Comienza tu camino hoy mismo
             </span>
 
-            <a class="boton" href="cursos.html">
+            <a class="boton" href="index.php?controller=cursos&action=index">
                 Ver Cursos
             </a>
         </div>
@@ -57,11 +35,20 @@ require_once __DIR__ . "/layout/header.php";
         <div class="contenedorTarjetas">
             <?php foreach ($cursos as $curso): ?>
                 <div class="tarjeta">
-                    <img src="<?php echo htmlspecialchars($curso['imagen']); ?>" alt="Curso <?php echo htmlspecialchars($curso['nombre']); ?>">
-                    <h3><?php echo htmlspecialchars($curso['nombre']); ?></h3>
-                    <p><?php echo htmlspecialchars($curso['descripcion']); ?></p>
-                    <p><strong><?php echo htmlspecialchars($curso['categoria']); ?></strong></p>
-                    <a class="boton2" href="cursos.html">Ver más</a>
+                    <img src="./Imagenes/<?php echo htmlspecialchars($curso["imagen"]); ?>"
+                         alt="Curso <?php echo htmlspecialchars($curso["nombre"]); ?>">
+
+                    <h3><?php echo htmlspecialchars($curso["nombre"]); ?></h3>
+
+                    <p><?php echo htmlspecialchars($curso["descripcion"]); ?></p>
+
+                    <p>
+                        <strong><?php echo htmlspecialchars($curso["categoria"]); ?></strong>
+                    </p>
+
+                    <a class="boton2" href="index.php?controller=cursos&action=index">
+                        Ver más
+                    </a>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -104,16 +91,6 @@ require_once __DIR__ . "/layout/header.php";
             </div>
         </div>
     </section>
+</main>
 
-    <footer class="footerAcademia">
-        <p class="nombreFooter">TechCore Academy</p>
-        <p>© 2026 - Redes Sociales - Créditos</p>
-    </footer>
-
-    <script src="./js/index.js"></script>
-</body>
-</html>
-
-<?php
-require_once __DIR__ . "/layout/footer.php";
-?>
+<?php require_once __DIR__ . "/layout/footer.php"; ?>

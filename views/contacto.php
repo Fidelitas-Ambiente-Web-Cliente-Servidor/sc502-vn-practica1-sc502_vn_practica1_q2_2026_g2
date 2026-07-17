@@ -1,3 +1,8 @@
+<?php
+$paginaActiva = "contacto";
+require_once __DIR__ . "/layout/header.php";
+?>
+
 <?php require_once __DIR__ . "/layout/header.php"; ?>
 
 <main>
@@ -114,4 +119,8 @@
     </section>
 </main>
 
-<?php require_once __DIR__ . "/layout/footer.php"; ?>
+
+<?php
+$scriptPagina = "contacto.js";
+require_once __DIR__ . "/layout/footer.php";
+?>

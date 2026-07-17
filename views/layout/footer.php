@@ -14,6 +14,8 @@
             </div>
         </footer>
 
-        <script src="js/contacto.js"></script>
+        <?php if (isset($scriptPagina)): ?>
+            <script src="js/<?php echo $scriptPagina; ?>"></script>
+        <?php endif; ?>
     </body>
 </html>

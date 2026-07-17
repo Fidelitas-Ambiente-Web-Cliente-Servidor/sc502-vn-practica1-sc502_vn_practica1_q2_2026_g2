@@ -8,11 +8,9 @@ class CursoModel
 
     public function __construct()
     {
-        $database = new Database();
-        $this->db = $database->connect();
+        $this->db = Database::getInstance()->getConnection();
     }
 
-    // Obtener todos los cursos
     public function getAll()
     {
         $sql = "SELECT * FROM cursos";
@@ -23,13 +21,11 @@ class CursoModel
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // Obtener cursos por categoría
     public function getByCategory($categoria)
     {
         $sql = "SELECT * FROM cursos WHERE categoria = :categoria";
 
         $stmt = $this->db->prepare($sql);
-
         $stmt->execute([
             ":categoria" => $categoria
         ]);

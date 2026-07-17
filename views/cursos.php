@@ -1,4 +1,8 @@
-<?php require_once "layout/header.php"; ?>
+<?php
+$paginaActiva = "cursos";
+require_once __DIR__ . "/layout/header.php";
+?>
+
 
 <main>
 
@@ -62,7 +66,8 @@
 
                 <div class="cardCurso">
 
-                    <img src="img/<?php echo $curso["imagen"]; ?>" alt="<?php echo $curso["nombre"]; ?>">
+                    <img src="Imagenes/<?php echo htmlspecialchars($curso["imagen"]); ?>"
+                        alt="<?php echo htmlspecialchars($curso["nombre"]); ?>">
 
                     <h3><?php echo $curso["nombre"]; ?></h3>
 
