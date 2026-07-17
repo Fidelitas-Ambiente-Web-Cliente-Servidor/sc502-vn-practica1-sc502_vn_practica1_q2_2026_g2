@@ -13,14 +13,20 @@ class ProfesoresController
 
     public function index()
     {
-        $profesores = $this->modelo->obtenerProfesores();
+        $profesores = $this->modelo->getAll();
 
         require_once __DIR__ . "/../views/profesores.php";
     }
 
-    public function mostrar($id)
+    public function show()
     {
-        $profesor = $this->modelo->obtenerProfesor($id);
+        if (!isset($_GET['id'])) {
+            die("Profesor no encontrado.");
+        }
+
+        $id = $_GET['id'];
+
+        $profesor = $this->modelo->getById($id);
 
         require_once __DIR__ . "/../views/profesor.php";
     }

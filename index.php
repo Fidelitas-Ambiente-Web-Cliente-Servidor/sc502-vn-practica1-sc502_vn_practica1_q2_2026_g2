@@ -1,25 +1,25 @@
 <?php
 
-$controllerName = isset($_GET['controller']) ? $_GET['controller'] : 'Index';
-$actionName = isset($_GET['action']) ? $_GET['action'] : 'index';
+$controller = $_GET['controller'] ?? 'Index';
+$action = $_GET['action'] ?? 'index';
 
-$controllerClass = ucfirst($controllerName) . 'Controller';
-$controllerFile = __DIR__ . '/controllers/' . $controllerClass . '.php';
+$controllerName = $controller . "Controller";
+$controllerFile = __DIR__ . "/controllers/" . $controllerName . ".php";
 
-if (file_exists($controllerFile)) {
-    require_once $controllerFile;
-
-    if (class_exists($controllerClass)) {
-        $controller = new $controllerClass();
-
-        if (method_exists($controller, $actionName)) {
-            $controller->$actionName();
-        } else {
-            echo 'Acción no encontrada';
-        }
-    } else {
-        echo 'Controlador no encontrado';
-    }
-} else {
-    echo 'Archivo de controlador no encontrado';
+if (!file_exists($controllerFile)) {
+    die("Controlador no encontrado.");
 }
+
+require_once $controllerFile;
+
+if (!class_exists($controllerName)) {
+    die("La clase del controlador no existe.");
+}
+
+$controllerObject = new $controllerName();
+
+if (!method_exists($controllerObject, $action)) {
+    die("La acción solicitada no existe.");
+}
+
+$controllerObject->$action();
