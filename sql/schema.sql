@@ -86,7 +86,7 @@ VALUES
 'Aprenda HTML, CSS y JavaScript.',
 'Desarrollo Web',
 '3 meses',
-'web.png'),
+'html.png'),
 
 ('Programación Java',
 'Aprenda programación orientada a objetos.',

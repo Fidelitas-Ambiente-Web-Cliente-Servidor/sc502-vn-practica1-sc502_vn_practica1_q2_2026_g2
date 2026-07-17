@@ -43,8 +43,9 @@
 /* Contenedor de las tarjetas */
 .filaCursos {
     display: flex;
-    
-    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
@@ -57,15 +58,15 @@
     padding: 20px;
     width: 300px;
     overflow: hidden;
-
+    text-align: center;
 }
 
 /* Imagen del curso */
 .tarjetaCurso img {
     width: 100%;
-    height: 290px;
-    object-fit: cover;
-    border-radius: 10px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
 /* Nombre del curso */
@@ -86,6 +87,9 @@
 
 }
 
+.paginaCursos {
+    min-height: 100vh;
+}
 
 
 
