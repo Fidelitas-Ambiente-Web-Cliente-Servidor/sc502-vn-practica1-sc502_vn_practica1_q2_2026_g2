@@ -43,7 +43,6 @@ function validarNombre() {
 
     limpiarError(nombre, errorNombre);
     return true;
-    
 }
 
 function validarCorreo() {
@@ -110,9 +109,11 @@ function validarFormulario() {
 
     if (nombreValido && correoValido && telefonoValido && asuntoValido && mensajeValido) {
         botonEnviar.disabled = false;
-    } else {
-        botonEnviar.disabled = true;
+        return true;
     }
+
+    botonEnviar.disabled = true;
+    return false;
 }
 
 nombre.addEventListener("input", validarFormulario);
@@ -122,19 +123,8 @@ asunto.addEventListener("input", validarFormulario);
 mensaje.addEventListener("input", validarFormulario);
 
 formulario.addEventListener("submit", function(evento) {
-    evento.preventDefault();
-
-    if (!botonEnviar.disabled) {
-        mensajeExito.textContent = "Formulario enviado correctamente.";
-
-        formulario.reset();
-
-        nombre.classList.remove("campoCorrecto");
-        correo.classList.remove("campoCorrecto");
-        telefono.classList.remove("campoCorrecto");
-        asunto.classList.remove("campoCorrecto");
-        mensaje.classList.remove("campoCorrecto");
-
-        botonEnviar.disabled = true;
+    if (!validarFormulario()) {
+        evento.preventDefault();
+        mensajeExito.textContent = "";
     }
 });

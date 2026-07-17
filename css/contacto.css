@@ -172,3 +172,22 @@
     background-color: #999999;
     cursor: not-allowed;
 }
+
+.mensajeServidor {
+    padding: 10px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    border: 1px solid #cccccc;
+}
+
+.exitoServidor {
+    color: #00a859;
+    background-color: #e8f8ee;
+    border-color: #00a859;
+}
+
+.errorServidor {
+    color: #b00020;
+    background-color: #fbe9ec;
+    border-color: #b00020;
+}
