@@ -43,12 +43,13 @@
 /* Contenedor de las tarjetas */
 .filaCursos {
     display: flex;
+    
+    gap: 20px;
     justify-content: center;
     align-items: stretch;
     gap: 25px;
     flex-wrap: wrap;
 }
-
 
 /* Tarjeta individual de cada curso */
 .tarjetaCurso {
