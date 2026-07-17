@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS techcore_academy;
-USE techcore_academy;
+CREATE DATABASE IF NOT EXISTS appdb;
+USE appdb;
 
 
 
