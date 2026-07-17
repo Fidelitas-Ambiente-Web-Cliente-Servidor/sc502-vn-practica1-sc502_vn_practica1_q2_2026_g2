@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Estilos generales -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Estilos de la página -->
-    <link rel="stylesheet" href="../css/profesores.css">
+    <link rel="stylesheet" href="css/profesores.css">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,15 +23,15 @@
         <nav class="menuPrincipal">
             <div class="contenedorMenu">
 
-                <a href="../index.php" class="logoAcademia">
+                <a href="index.php" class="logoAcademia">
                     TechCore Academy
                 </a>
 
                 <ul class="listaMenu">
-                    <li><a href="../index.php">Inicio</a></li>
-                    <li><a href="../cursos.html">Cursos</a></li>
-                    <li><a href="../index.php" class="activo">Profesores</a></li>
-                    <li><a href="../contacto.html">Contacto</a></li>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li><a href="index.php?controller=Profesores&action=index" class="activo">Profesores</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
 
             </div>
@@ -66,7 +66,7 @@
                         <div class="tarjetaProfesor">
 
                             <img
-                                src="../Imagenes/<?php echo htmlspecialchars($profesor['foto']); ?>"
+                                src="Imagenes/<?php echo htmlspecialchars($profesor['foto']); ?>"
                                 alt="<?php echo htmlspecialchars($profesor['nombre']); ?>">
 
                             <h2>
@@ -82,7 +82,7 @@
                             </p>
 
                             <a class="btn btn-primary"
-                               href="../index.php?controller=Profesores&action=show&id=<?php echo $profesor['id']; ?>">
+                               href="index.php?controller=Profesores&action=show&id=<?php echo $profesor['id']; ?>">
                                 Ver perfil
                             </a>
 
